@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/nav_home"
+            android:title="@string/home" />
+
+        <item
+            android:id="@+id/nav_article"
+            android:icon="@drawable/nav_article"
+            android:title="@string/article" />
+
+        <item
+            android:id="@+id/nav_events"
+            android:icon="@drawable/nav_events"
+            android:title="@string/events" />
+
+        <item
+            android:id="@+id/nav_trade"
+            android:icon="@drawable/nav_trade"
+            android:title="@string/trade" />
+
+
+        <item
+            android:id="@+id/nav_locality"
+            android:icon="@drawable/nav_locality"
+            android:title="@string/locality" />
+
+
+        <item
+            android:id="@+id/nav_message"
+            android:icon="@drawable/nav_message"
+            android:title="@string/message" />
+    </group>
+
+
+</menu>
