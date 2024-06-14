@@ -28,7 +28,6 @@
             android:icon="@drawable/nav_locality"
             android:title="@string/locality" />
 
-
         <item
             android:id="@+id/nav_message"
             android:icon="@drawable/nav_message"
