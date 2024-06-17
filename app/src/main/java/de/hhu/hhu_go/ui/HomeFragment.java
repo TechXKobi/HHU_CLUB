@@ -63,8 +63,8 @@ public class HomeFragment extends Fragment {
         adapter.setListener(new CaptionedImagesAdapter.Listener() {
             @Override
             public void onClick(int position) {
-                //ArticleFragment frag = new ArticleFragment();
-                ((MainActivity) getActivity()).replaceFragment(position);
+                ArticleDetailsFragment frag = new ArticleDetailsFragment(articles[position]);
+                ((MainActivity) getActivity()).replaceFragment(position, frag);
             }
         });
 

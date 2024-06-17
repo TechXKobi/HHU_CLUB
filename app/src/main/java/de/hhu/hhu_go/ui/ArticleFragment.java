@@ -32,18 +32,20 @@ public class ArticleFragment extends Fragment {
             a.addImage(R.drawable.study);
         }
 
-        CaptionedImagesAdapter adapter = new CaptionedImagesAdapter(articles);
+        ArticleCaptionedImagesAdapter adapter = new ArticleCaptionedImagesAdapter(articles);
         recycler.setAdapter(adapter);
 
         StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);
         layoutManager.setGapStrategy(2);
         recycler.setLayoutManager(layoutManager);
 
-        adapter.setListener(new CaptionedImagesAdapter.Listener() {
+        adapter.setListener(new ArticleCaptionedImagesAdapter.Listener() {
             @Override
             public void onClick(int position) {
-                ArticleDetailsFragment frag = new ArticleDetailsFragment();
-                ((MainActivity) getActivity()).replaceFragment(position);
+                Article a = DummyData.articles[position];
+                articles[position].addImage(R.drawable.bible_study);
+                ArticleDetailsFragment frag = new ArticleDetailsFragment(a);
+                ((MainActivity) getActivity()).replaceFragment(position, frag);
             }
         });
 

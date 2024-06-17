@@ -12,6 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/article"
+        android:fontFamily="@font/clashgrotesk_semibold"
+        android:textSize="30sp"
+        android:textColor="@color/NavyBlue2"
         android:layout_marginBottom="30dp"
         android:layout_gravity="center_horizontal" />
 

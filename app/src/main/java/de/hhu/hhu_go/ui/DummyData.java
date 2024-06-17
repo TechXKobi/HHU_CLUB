@@ -19,5 +19,7 @@ public class DummyData {
                     new Article("Endlich ist es soweit.","Hi, zusammen. Ich habe meinen Bachelor-Abschluss in der Tasche.", 2, LocalDateTime.of(2024, 6,12, 9,0)),
                     new Article("Endlich ist es soweit!","Hi, zusammen. Ich habe meinen Master-Abschluss.", 3, LocalDateTime.of(2024, 6,12, 16,23)),
                     new Article("Fern von der Zukunft!","Wie der Klimawandel immer aggressiver vorangetrieben wird von den Menschen.", 3, LocalDateTime.of(2024, 6,12, 16,23)),
+                    new Article("Künstliche Intelligenz spielt LoL","Ich möchte euch meine KI vorstellen, die Pro-Spieler in League of Legends outperformed hat.", 3, LocalDateTime.of(2024, 6,12, 16,23)),
+                    new Article("Time to Shine","MINT-Workshop mit KI-Einblick.", 3, LocalDateTime.of(2024, 6,12, 16,23)),
                     new Article("Künstliche Intelligenz spielt LoL","Ich möchte euch meine KI vorstellen, die Pro-Spieler in League of Legends outperformed hat.", 3, LocalDateTime.of(2024, 6,12, 16,23))};
 }

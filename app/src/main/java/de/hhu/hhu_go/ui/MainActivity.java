@@ -69,8 +69,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
-    public void replaceFragment(int position) {
-        ArticleFragment frag = new ArticleFragment();
+    public void replaceFragment(int position, Fragment frag) {
+        //ArticleFragment frag = new ArticleFragment();
+
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.content_frame, frag);
         ft.commit();
