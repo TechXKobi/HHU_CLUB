@@ -1,4 +1,4 @@
-package de.hhu.hhu_go;
+package de.hhu.hhu_go.ui;
 
 import android.os.Bundle;
 
@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import de.hhu.hhu_go.R;
 
 /**
  * A simple {@link Fragment} subclass.

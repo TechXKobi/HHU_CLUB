@@ -10,4 +10,7 @@
     <string name="message">Nachrichten</string>
     <string name="nav_open_drawer">open</string>
     <string name="nav_close_drawer">close</string>
+    <string name="welcome">Hey, schön dich wiederzusehen!</string>
+    <string name="hot_articles">Heiße Beiträge 🔥:</string>
+    <string name="clickHint">Klick 👆 einfach auf die Beiträge</string>
 </resources>
