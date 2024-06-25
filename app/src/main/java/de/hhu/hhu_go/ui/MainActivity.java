@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (fragment != null){
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_frame, fragment);
+            ft.addToBackStack(null);
             ft.commit();
         }
 
@@ -74,20 +75,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.content_frame, frag);
+        ft.addToBackStack(null);
         ft.commit();
     }
 
-    /*@Override
+
+    @Override
     public void onBackPressed() {
-        super.onBackPressed();
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         }
         else{
-            super.onBackPressed();
+            return;
         }
-    } */
+    }
 
 
 }
