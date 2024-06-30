@@ -42,7 +42,7 @@ public class ArticleFragment extends Fragment {
         adapter.setListener(new ArticleCaptionedImagesAdapter.Listener() {
             @Override
             public void onClick(int position) {
-                Article a = DummyData.articles[position];
+                Article a = DummyData.articles2[position];
                 articles[position].addImage(R.drawable.bible_study);
                 ArticleDetailsFragment frag = new ArticleDetailsFragment(a);
                 ((MainActivity) getActivity()).replaceFragment(position, frag);

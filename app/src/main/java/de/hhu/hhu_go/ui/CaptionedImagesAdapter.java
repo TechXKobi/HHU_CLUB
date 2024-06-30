@@ -11,8 +11,6 @@ import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.net.URL;
-
 import de.hhu.hhu_go.R;
 import de.hhu.hhu_go.domain.Article;
 

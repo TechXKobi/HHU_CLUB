@@ -4,6 +4,7 @@ import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -73,6 +74,8 @@ class ArticleCaptionedImagesAdapter
 
         title.setText(a.getTitle());
         subhead.setText("von Max Musti");
+
+        if(a.getTitle().length() > 20) title.setPaddingRelative(0,0,0,100);
 
         cardView.setOnClickListener(new View.OnClickListener(){
             @Override
