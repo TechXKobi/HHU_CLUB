@@ -75,7 +75,12 @@ class ArticleCaptionedImagesAdapter
         title.setText(a.getTitle());
         subhead.setText("von Max Musti");
 
-        if(a.getTitle().length() > 20) title.setPaddingRelative(0,0,0,100);
+        if(a.getTitle().length() > 25) {
+            CardView.LayoutParams params = new CardView.LayoutParams(CardView.LayoutParams.WRAP_CONTENT, CardView.LayoutParams.WRAP_CONTENT);
+            params.setMargins(0,430,0,0);
+            params.gravity = 1;
+            title.setLayoutParams(params);
+        }
 
         cardView.setOnClickListener(new View.OnClickListener(){
             @Override
