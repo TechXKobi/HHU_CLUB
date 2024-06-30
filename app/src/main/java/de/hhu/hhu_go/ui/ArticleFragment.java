@@ -10,12 +10,13 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import de.hhu.hhu_go.R;
 import de.hhu.hhu_go.domain.Article;
 
-public class ArticleFragment extends Fragment {
+public class ArticleFragment extends Fragment implements View.OnClickListener {
 
 
     @Override
@@ -49,6 +50,16 @@ public class ArticleFragment extends Fragment {
             }
         });
 
+        Button addArticleButton = (Button) layout.findViewById(R.id.addArticle);
+        addArticleButton.setOnClickListener(this);
         return layout;
+    }
+
+    @Override
+    public void onClick(View view){
+        onAddArticle();
+    }
+
+    private void onAddArticle(){
     }
 }
