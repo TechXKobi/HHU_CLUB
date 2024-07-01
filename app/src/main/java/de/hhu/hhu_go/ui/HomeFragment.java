@@ -21,13 +21,17 @@ import java.time.temporal.ChronoUnit;
 
 import de.hhu.hhu_go.R;
 import de.hhu.hhu_go.domain.Article;
+import de.hhu.hhu_go.domain.Events;
+import de.hhu.hhu_go.domain.Locality;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment{
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        // hot articles
 
         LinearLayout layout = (LinearLayout) inflater
                 .inflate(R.layout.fragment_home,
@@ -64,6 +68,48 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(int position) {
                 ArticleDetailsFragment frag = new ArticleDetailsFragment(articles[position]);
+                ((MainActivity) getActivity()).replaceFragment(position, frag);
+            }
+        });
+
+        // hot events
+        RecyclerView eventsRecycler = (RecyclerView) layout.findViewById(R.id.top_events_recycler);
+
+        Events[] events = DummyData.events;
+
+        // build view for hot events
+        CaptionedImagesAdapterEvents eventsAdapter = new CaptionedImagesAdapterEvents(events);
+        eventsRecycler.setAdapter(eventsAdapter);
+
+        LinearLayoutManager layoutManager2 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
+        eventsRecycler.setLayoutManager(layoutManager2);
+
+        eventsAdapter.setListener(new CaptionedImagesAdapterEvents.Listener() {
+            @Override
+            public void onClick(int position) {
+                EventDetailsFragment frag = new EventDetailsFragment(events[position]);
+                ((MainActivity) getActivity()).replaceFragment(position, frag);
+            }
+        });
+
+        // hot locations
+
+        RecyclerView hhuRecycler = layout.findViewById(R.id.top_locality_recycler);
+
+        Locality[] hhuLocalities = DummyData.hhuLocalities;
+
+        // build view for hhu locality
+        CaptionedImagesAdapterLocality hhuAdapter = new CaptionedImagesAdapterLocality(hhuLocalities);
+        hhuRecycler.setAdapter(hhuAdapter);
+
+        LinearLayoutManager layoutManager3 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
+
+        hhuRecycler.setLayoutManager(layoutManager3);
+
+        hhuAdapter.setListener(new CaptionedImagesAdapterLocality.Listener() {
+            @Override
+            public void onClick(int position) {
+                LocalityDetailsFragment frag = new LocalityDetailsFragment(hhuLocalities[position]);
                 ((MainActivity) getActivity()).replaceFragment(position, frag);
             }
         });

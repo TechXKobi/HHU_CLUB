@@ -72,8 +72,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void replaceFragment(int position, Fragment frag) {
-        //ArticleFragment frag = new ArticleFragment();
-
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.content_frame, frag);
         ft.addToBackStack(null);

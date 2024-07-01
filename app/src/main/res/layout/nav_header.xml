@@ -4,6 +4,15 @@
     android:layout_height="180dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
+    <ImageView
+        android:id="@+id/nav_header_image"
+        android:layout_width="220sp"
+        android:layout_height="110sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="40sp"
+        android:src="@drawable/hhugo_logo3"
+        android:scaleType="centerCrop"/>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
@@ -11,12 +20,12 @@
         android:gravity="start"
         android:layout_margin="16dp" >
 
-        <TextView
+        <!--<TextView
             android:textColor="@color/NavyBlue"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="@string/app_name"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>-->
     </LinearLayout>
 
 </FrameLayout>
