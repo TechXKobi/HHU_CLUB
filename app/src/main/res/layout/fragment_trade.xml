@@ -1,14 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.TradeFragment">
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+    tools:context="de.hhu.hhu_go.ui.MainActivity">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tradeTitle"
+        android:fontFamily="@font/clashgrotesk_semibold"
+        android:textSize="30sp"
+        android:textColor="@color/NavyBlue2"
+        android:layout_margin="15sp"
+        android:layout_gravity="center_horizontal" />
 
-</FrameLayout>
+    <LinearLayout
+        android:id="@+id/filterTradeBar"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/categoryTradeFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/clashgrotesk_semibold"
+            android:text="@string/categoryFilter"
+            android:outlineAmbientShadowColor="@color/NavyBlue2"
+            android:color="@color/NavyBlue2"
+            android:textColor="@color/NavyBlue"/>
+
+        <Button
+            android:id="@+id/applyTradeFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/clashgrotesk_semibold"
+            android:text="@string/applyFilter"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/resetTradeFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:fontFamily="@font/clashgrotesk_semibold"
+            android:text="@string/resetFilter"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/offers"
+        android:fontFamily="@font/clashgrotesk_semibold"
+        android:layout_marginBottom="15sp"
+        android:layout_marginTop="15sp"
+        android:layout_marginLeft="15sp"
+        android:textSize="23sp"
+        android:textColor="@color/NavyBlue"
+        android:layout_gravity="start" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/trade_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/addOffer"
+        android:layout_width="wrap_content"
+        android:layout_height="60sp"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/clashgrotesk_semibold"
+        android:text="@string/addOffer"
+        android:textColor="@color/white"/>
+</LinearLayout>
