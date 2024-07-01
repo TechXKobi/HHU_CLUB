@@ -1,14 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.LocalityFragment">
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+    tools:context="de.hhu.hhu_go.ui.MainActivity">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/localityTitle"
+        android:fontFamily="@font/clashgrotesk_semibold"
+        android:textSize="30sp"
+        android:textColor="@color/NavyBlue2"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hhu_sights"
+        android:fontFamily="@font/clashgrotesk_semibold"
+        android:layout_marginBottom="15sp"
+        android:layout_marginLeft="15sp"
+        android:textSize="23sp"
+        android:textColor="@color/NavyBlue"
+        android:layout_gravity="start" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hhu_locality_recycler"
+        android:scrollbars="none"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginBottom="15dp">
+    </androidx.recyclerview.widget.RecyclerView>
 
-</FrameLayout>
+    <Button
+        android:id="@+id/addLocality"
+        android:layout_width="wrap_content"
+        android:layout_height="60sp"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/clashgrotesk_semibold"
+        android:text="@string/addLocality"
+        android:textColor="@color/white"/>
+</LinearLayout>
