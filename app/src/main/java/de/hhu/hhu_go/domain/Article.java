@@ -19,17 +19,20 @@ public class Article implements Comparable<Article>{
 
     private LocalDateTime dateTime;
 
-    public Article(Integer id, String title, String content, Integer creatorId, LocalDateTime dateTime){
+    private String category;
+
+    public Article(Integer id, String title, String content, Integer creatorId, LocalDateTime dateTime, String category){
         this.id = id;
         this.title = title;
         this.content = content;
         this.creatorId = creatorId;
         this.dateTime = dateTime;
+        this.category = category;
     }
 
-    public Article( String title, String content, Integer creatorId,
-                   LocalDateTime dateTime){
-        this(null, title, content, creatorId, dateTime);
+    public Article(String title, String content, Integer creatorId,
+                   LocalDateTime dateTime, String category){
+        this(null, title, content, creatorId, dateTime, category);
     }
 
     public Integer getId() {
@@ -106,5 +109,13 @@ public class Article implements Comparable<Article>{
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }

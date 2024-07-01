@@ -1,9 +1,6 @@
 package de.hhu.hhu_go.domain;
 
 import java.net.URL;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 public class Locality implements Comparable<Locality>{
@@ -14,25 +11,31 @@ public class Locality implements Comparable<Locality>{
 
     private String description;
 
-    private Integer postCode;
+    private String address;
 
-    private Integer googleStarsRating;
-
-    private URL linkGoogle;
+    private String link;
 
     private String locationCategory;
 
+    private Integer imageId;
+
     public Locality(Integer id, String locationName,
-                    String description, Integer postCode,
-                    Integer googleStarsRating, URL link,
-                    String locationCategory){
+                    String description, String address, String link,
+                    String locationCategory, Integer imageId){
         this.id = id;
         this.locationName = locationName;
         this.description = description;
-        this.postCode = postCode;
-        this.googleStarsRating = googleStarsRating;
-        this.linkGoogle = link;
+        this.address = address;
+        this.link = link;
         this.locationCategory = locationCategory;
+        this.imageId = imageId;
+    }
+
+    public Locality(String locationName,
+                    String description, String address,
+                    String link, String locationCategory, Integer imageId){
+        this(null, locationName, description, address,
+                link, locationCategory, imageId);
     }
 
 
@@ -60,28 +63,20 @@ public class Locality implements Comparable<Locality>{
         this.description = description;
     }
 
-    public Integer getPostCode() {
-        return postCode;
+    public String getAddress() {
+        return address;
     }
 
-    public void setPostCode(Integer postCode) {
-        this.postCode = postCode;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public Integer getGoogleStarsRating() {
-        return googleStarsRating;
+    public String getLink() {
+        return link;
     }
 
-    public void setGoogleStarsRating(Integer googleStarsRating) {
-        this.googleStarsRating = googleStarsRating;
-    }
-
-    public URL getLinkGoogle() {
-        return linkGoogle;
-    }
-
-    public void setLinkGoogle(URL linkGoogle) {
-        this.linkGoogle = linkGoogle;
+    public void setLink(String link) {
+        this.link = link;
     }
 
     public String getLocationCategory() {
@@ -114,5 +109,13 @@ public class Locality implements Comparable<Locality>{
     @Override
     public int hashCode(){
         return Objects.hash(id);
+    }
+
+    public Integer getImageId() {
+        return imageId;
+    }
+
+    public void setImageId(Integer imageId) {
+        this.imageId = imageId;
     }
 }
