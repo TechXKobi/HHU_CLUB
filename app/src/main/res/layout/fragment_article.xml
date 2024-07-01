@@ -18,6 +18,40 @@
         android:layout_marginBottom="30dp"
         android:layout_gravity="center_horizontal" />
 
+    <LinearLayout
+        android:id="@+id/filterBar"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/categoryFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/clashgrotesk_semibold"
+            android:text="@string/categoryFilter"
+            android:outlineAmbientShadowColor="@color/NavyBlue2"
+            android:color="@color/NavyBlue2"
+            android:textColor="@color/NavyBlue"/>
+
+        <Button
+            android:id="@+id/applyFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/clashgrotesk_semibold"
+            android:text="@string/applyFilter"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/resetFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:fontFamily="@font/clashgrotesk_semibold"
+            android:text="@string/resetFilter"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/article_recycler"
         android:scrollbars="none"
