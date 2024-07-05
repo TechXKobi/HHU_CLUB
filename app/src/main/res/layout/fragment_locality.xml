@@ -36,6 +36,44 @@
         android:layout_marginBottom="15dp">
     </androidx.recyclerview.widget.RecyclerView>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dus_stadtmitte"
+        android:fontFamily="@font/clashgrotesk_semibold"
+        android:layout_marginBottom="15sp"
+        android:layout_marginLeft="15sp"
+        android:textSize="23sp"
+        android:textColor="@color/NavyBlue"
+        android:layout_gravity="start" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/second_locality_recycler"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="15dp">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dus_rhein"
+        android:fontFamily="@font/clashgrotesk_semibold"
+        android:layout_marginBottom="15sp"
+        android:layout_marginLeft="15sp"
+        android:textSize="23sp"
+        android:textColor="@color/NavyBlue"
+        android:layout_gravity="start" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/third_locality_recycler"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="15dp">
+    </androidx.recyclerview.widget.RecyclerView>
+
     <Button
         android:id="@+id/addLocality"
         android:layout_width="wrap_content"

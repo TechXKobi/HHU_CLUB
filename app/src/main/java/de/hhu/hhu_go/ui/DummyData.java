@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 
 import de.hhu.hhu_go.R;
 import de.hhu.hhu_go.domain.Article;
+import de.hhu.hhu_go.domain.Contact;
 import de.hhu.hhu_go.domain.Events;
 import de.hhu.hhu_go.domain.Locality;
 import de.hhu.hhu_go.domain.Offer;
@@ -87,8 +88,39 @@ public class DummyData {
             new Locality("Mensa an der HHU", "Zentralmensa an der HHU", "Universitätsstraße 1, 40225 Düsseldorf", "https://www.hhu.de/die-hhu/kontakt-und-services/lageplan-und-anfahrt", "Universität", R.drawable.hhu_mensa),
             new Locality("Oeconomicum", "Gebäude der wirtschaftlichen Fakultät", "Universitätsstraße 1, 40225 Düsseldorf", "https://www.hhu.de/die-hhu/kontakt-und-services/lageplan-und-anfahrt", "Universität", R.drawable.hhu_oceo),
             new Locality("SSC", "Studierenden-Service-Center der HHU", "Universitätsstraße 1, 40225 Düsseldorf", "https://www.hhu.de/die-hhu/kontakt-und-services/lageplan-und-anfahrt", "Universität", R.drawable.hhu_ssc),
-            new Locality("UKD", "Universitätsklinikum Düsseldorf", "Moorenstraße 5 Universitätsklinikum, 40225 Düsseldorf", "https://www.uniklinik-duesseldorf.de/patienten-besucher/als-patient-am-ukd/anreise-anfahrt-und-lageplan", "Universität", R.drawable.hhu_ukd),
+            new Locality("UKD", "Universitätsklinikum Düsseldorf", "Moorenstraße 5 Universitätsklinikum, 40225 Düsseldorf", "https://www.uniklinik-duesseldorf.de/patienten-besucher/als-patient-am-ukd/anreise-anfahrt-und-lageplan", "niversität", R.drawable.hhu_ukd),
     };
 
+    public static Locality[] localities = {
+            new Locality("GALERIA Düsseldorf Königsallee", "Ein riesen Einkaufszentrum für alles","Königsallee 1-9, 40212 Düsseldorf", "https://www.galeria.de/filialen/l/dusseldorf/konigsallee-1-9/001310", "Stadtmitte", R.drawable.dus_temp2),new Locality("GALERIA Düsseldorf Königsallee", "Ein riesen Einkaufszentrum für alles","Königsallee 1-9, 40212 Düsseldorf", "https://www.galeria.de/filialen/l/dusseldorf/konigsallee-1-9/001310", "Stadtmitte", R.drawable.dus_temp2),new Locality("GALERIA Düsseldorf Königsallee", "Ein riesen Einkaufszentrum für alles","Königsallee 1-9, 40212 Düsseldorf", "https://www.galeria.de/filialen/l/dusseldorf/konigsallee-1-9/001310", "Stadtmitte", R.drawable.dus_temp2),new Locality("GALERIA Düsseldorf Königsallee", "Ein riesen Einkaufszentrum für alles","Königsallee 1-9, 40212 Düsseldorf", "https://www.galeria.de/filialen/l/dusseldorf/konigsallee-1-9/001310", "Stadtmitte", R.drawable.dus_temp2),new Locality("GALERIA Düsseldorf Königsallee", "Ein riesen Einkaufszentrum für alles","Königsallee 1-9, 40212 Düsseldorf", "https://www.galeria.de/filialen/l/dusseldorf/konigsallee-1-9/001310", "Stadtmitte", R.drawable.dus_temp2),new Locality("GALERIA Düsseldorf Königsallee", "Ein riesen Einkaufszentrum für alles","Königsallee 1-9, 40212 Düsseldorf", "https://www.galeria.de/filialen/l/dusseldorf/konigsallee-1-9/001310", "Stadtmitte", R.drawable.dus_temp2)
+    };
 
+    public static Locality[] localities2 = {
+            new Locality("Rheinkniebrücke", "Die Brücke am Rhein"," Rheinkniebrücke, 40545 Düsseldorf", "https://de.wikipedia.org/wiki/Rheinkniebr%C3%BCcke", "Rhein", R.drawable.dus_rhein),
+            new Locality("Rheinkniebrücke", "Die Brücke am Rhein"," Rheinkniebrücke, 40545 Düsseldorf", "https://de.wikipedia.org/wiki/Rheinkniebr%C3%BCcke", "Rhein", R.drawable.dus_rhein),
+            new Locality("Rheinkniebrücke", "Die Brücke am Rhein"," Rheinkniebrücke, 40545 Düsseldorf", "https://de.wikipedia.org/wiki/Rheinkniebr%C3%BCcke", "Rhein", R.drawable.dus_rhein),
+            new Locality("Rheinkniebrücke", "Die Brücke am Rhein"," Rheinkniebrücke, 40545 Düsseldorf", "https://de.wikipedia.org/wiki/Rheinkniebr%C3%BCcke", "Rhein", R.drawable.dus_rhein),
+            new Locality("Rheinkniebrücke", "Die Brücke am Rhein"," Rheinkniebrücke, 40545 Düsseldorf", "https://de.wikipedia.org/wiki/Rheinkniebr%C3%BCcke", "Rhein", R.drawable.dus_rhein),
+            new Locality("Rheinkniebrücke", "Die Brücke am Rhein"," Rheinkniebrücke, 40545 Düsseldorf", "https://de.wikipedia.org/wiki/Rheinkniebr%C3%BCcke", "Rhein", R.drawable.dus_rhein),
+            new Locality("Rheinkniebrücke", "Die Brücke am Rhein"," Rheinkniebrücke, 40545 Düsseldorf", "https://de.wikipedia.org/wiki/Rheinkniebr%C3%BCcke", "Rhein", R.drawable.dus_rhein),
+            new Locality("Rheinkniebrücke", "Die Brücke am Rhein"," Rheinkniebrücke, 40545 Düsseldorf", "https://de.wikipedia.org/wiki/Rheinkniebr%C3%BCcke", "Rhein", R.drawable.dus_rhein)};
+
+        public static Contact[] contacts = {new Contact(LocalDateTime.of(2024, 7, 12, 12, 34),
+            "Hi, was genau sollten wir zur digitalen Innovation machen?",
+            R.drawable.profile1),
+            new Contact(LocalDateTime.of(2024, 7, 14, 12, 34),
+                    "Also die Abgabe ist morgen lol.",
+                    R.drawable.profile2),
+            new Contact(LocalDateTime.of(2024, 6, 14, 12, 34),
+                    "Dange.",
+                    R.drawable.profile1),
+            new Contact(LocalDateTime.of(2024, 7, 9, 12, 34),
+                    "Wir sehen uns dann nachher \uD83D\uDC4B.",
+                    R.drawable.profile2),
+            new Contact(LocalDateTime.of(2024, 7, 21, 12, 34),
+                    "Nein, das geht schon so \uD83D\uDE00.",
+                    R.drawable.profile1),
+            new Contact(LocalDateTime.of(2024, 7, 13, 12, 34),
+                    "Jo, machen wir auf jeden Fall! \uD83D\uDE01.",
+                    R.drawable.profile2)};
 }

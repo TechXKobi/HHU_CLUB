@@ -35,4 +35,8 @@
     </string>
     <string name="hotLocalities">Heiße Orte 🔥</string>
     <string name="action_share">Teile 🔗</string>
+    <string name="dus_stadtmitte">In der Düsseldorfer Stadtmitte 🚀</string>
+    <string name="dus_rhein">Am Rhein 🌊</string>
+    <string name="messengerTitle">Chatte 💬</string>
+    <string name="startChat">+ Sende Chatanfrage</string>
 </resources>

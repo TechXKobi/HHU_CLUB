@@ -20,6 +20,9 @@ public class LocalityFragment extends Fragment implements View.OnClickListener{
 
     private LinearLayout layout;
     private RecyclerView hhuRecycler;
+    private RecyclerView secondRecycler;
+    private RecyclerView thirdRecycler;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -27,7 +30,6 @@ public class LocalityFragment extends Fragment implements View.OnClickListener{
         // Inflate the layout for this fragment
         LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.fragment_locality, container, false);
         RecyclerView hhuRecycler = layout.findViewById(R.id.hhu_locality_recycler);
-
         Locality[] hhuLocalities = DummyData.hhuLocalities;
 
         // build view for hhu locality
@@ -46,11 +48,47 @@ public class LocalityFragment extends Fragment implements View.OnClickListener{
             }
         });
 
+        // build view for downtown localities
+        RecyclerView secondRecycler = (RecyclerView) layout.findViewById(R.id.second_locality_recycler);
+        Locality[] localities = DummyData.localities;
+
+        CaptionedImagesAdapterLocality secondAdapter = new CaptionedImagesAdapterLocality(localities);
+        secondRecycler.setAdapter(secondAdapter);
+        LinearLayoutManager layoutManager2 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
+        secondRecycler.setLayoutManager(layoutManager2);
+
+        secondAdapter.setListener(new CaptionedImagesAdapterLocality.Listener() {
+            @Override
+            public void onClick(int position) {
+                LocalityDetailsFragment frag = new LocalityDetailsFragment(localities[position]);
+                ((MainActivity) getActivity()).replaceFragment(position, frag);
+            }
+        });
+
+        // build view for rhine attractions
+        RecyclerView thirdRecycler = (RecyclerView) layout.findViewById(R.id.third_locality_recycler);
+        Locality[] localities2 = DummyData.localities2;
+
+        CaptionedImagesAdapterLocality thirdAdapter = new CaptionedImagesAdapterLocality(localities2);
+        thirdRecycler.setAdapter(thirdAdapter);
+        LinearLayoutManager layoutManager3 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
+        thirdRecycler.setLayoutManager(layoutManager3);
+
+        thirdAdapter.setListener(new CaptionedImagesAdapterLocality.Listener() {
+            @Override
+            public void onClick(int position) {
+                LocalityDetailsFragment frag = new LocalityDetailsFragment(localities2[position]);
+                ((MainActivity) getActivity()).replaceFragment(position, frag);
+            }
+        });
+
         Button addLocalityButton = (Button) layout.findViewById(R.id.addLocality);
         addLocalityButton.setOnClickListener(this);
 
         this.layout = layout;
         this.hhuRecycler = hhuRecycler;
+        this.secondRecycler = secondRecycler;
+        this.thirdRecycler = thirdRecycler;
 
         return layout;
     }
