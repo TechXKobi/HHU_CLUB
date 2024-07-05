@@ -1,13 +1,24 @@
 package de.hhu.hhu_go.ui;
 
+import static android.widget.Toast.makeText;
+
+import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.ShareActionProvider;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
+import androidx.core.view.MenuItemCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -18,6 +29,9 @@ import com.google.android.material.navigation.NavigationView;
 import de.hhu.hhu_go.R;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+
+    private final String shareText = "Du willst Events der HHU nicht verpassen?\nDu willst gemeinsam mit Kommilitonen Lerntreffen organisieren?\nDu willst Beiträge schreiben und sie für andere Studierende veröffentlichen?\nDu willst Kleidung oder Bücher verkaufen, kaufen oder mit anderen Studierenden tauschen?\nDu willst Düsseldorf kennenlernen?\nDann ist hhuGo genau die richtige App! Lade sie Dir jetzt herunter!";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,7 +108,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menu_toolbar, menu);
+        MenuItem menuItem = menu.findItem(R.id.action_share);
         return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch(item.getItemId()){
+            case R.id.action_share:
+                setShareActionIntent(shareText);
+                return true;
+            default:
+                return false;
+        }
+    }
+
+    private void setShareActionIntent(String text){
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_TEXT, text);
+        Intent chosenIntent = Intent.createChooser(intent, getString(R.string.action_share));
+        startActivity(chosenIntent);
     }
 
 
