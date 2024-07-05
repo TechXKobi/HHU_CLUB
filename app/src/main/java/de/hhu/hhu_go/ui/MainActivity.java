@@ -1,6 +1,7 @@
 package de.hhu.hhu_go.ui;
 
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -88,6 +89,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         else{
             super.onBackPressed();
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu_toolbar, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
 
