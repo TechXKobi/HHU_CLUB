@@ -10,7 +10,7 @@
         android:layout_height="110sp"
         android:layout_marginLeft="20sp"
         android:layout_marginTop="40sp"
-        android:src="@drawable/hhugo_logo3"
+        android:src="@drawable/hhulogofinale"
         android:scaleType="centerCrop"/>
 
     <LinearLayout

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="NavyBlue">#1684DC</color>
-    <color name="NavyBlue2">#0C6DBA</color>
+    <!-- NavyBlue(2) ist in Wirklichkeit Purpleblau -->
+    <color name="NavyBlue">#2108B7</color>
+    <color name="NavyBlue2">#2F1A82</color>
     <color name="BrightBlue">#45ACFF</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
@@ -11,4 +12,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="blueGrey">#c6e7f7</color>
+    <color name="offWhite">#FCF2EA</color>
 </resources>

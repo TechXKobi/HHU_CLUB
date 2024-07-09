@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/offWhite"
     tools:context=".ui.LaunchActivity">
 
     <ImageView
@@ -12,6 +13,6 @@
         android:layout_width="400sp"
         android:layout_height="200sp"
         android:layout_gravity="center"
-        android:src="@drawable/hhugo_logo2"/>
+        android:src="@drawable/hhulogofinale"/>
 
 </LinearLayout>
