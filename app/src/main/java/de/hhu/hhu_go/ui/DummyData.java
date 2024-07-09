@@ -105,6 +105,16 @@ public class DummyData {
             new Locality("Rheinkniebrücke", "Die Brücke am Rhein"," Rheinkniebrücke, 40545 Düsseldorf", "https://de.wikipedia.org/wiki/Rheinkniebr%C3%BCcke", "Rhein", R.drawable.dus_rhein),
             new Locality("Rheinkniebrücke", "Die Brücke am Rhein"," Rheinkniebrücke, 40545 Düsseldorf", "https://de.wikipedia.org/wiki/Rheinkniebr%C3%BCcke", "Rhein", R.drawable.dus_rhein)};
 
+    public static Locality[] foodLocalities = {
+            new Locality("FoodBar", "Das Restaurant in Düsseldorf.","XYZ, 40545 Düsseldorf", "https://de.wikipedia.org/wiki/Pizza", "Alles", R.drawable.food),
+            new Locality("Santinos Pizza", "Beste Pizza in Düsseldorf.","XYZ, 40545 Düsseldorf", "https://de.wikipedia.org/wiki/Pizza", "Alles", R.drawable.food2),
+            new Locality("Düsseldorfer Döner", "Bester Döner in Düsseldorf.","XYZ, 40545 Düsseldorf", "https://de.wikipedia.org/wiki/Pizza", "Alles", R.drawable.food3),
+            new Locality("Vegano", "Vegan und gesund.","XYZ, 40545 Düsseldorf", "https://de.wikipedia.org/wiki/Pizza", "Vegan", R.drawable.food4),
+            new Locality("FoodBar", "Das Restaurant in Düsseldorf.","XYZ, 40545 Düsseldorf", "https://de.wikipedia.org/wiki/Pizza", "Alles", R.drawable.food),
+            new Locality("Santinos Pizza", "Beste Pizza in Düsseldorf.","XYZ, 40545 Düsseldorf", "https://de.wikipedia.org/wiki/Pizza", "Alles", R.drawable.food2),
+            new Locality("Düsseldorfer Döner", "Bester Döner in Düsseldorf.","XYZ, 40545 Düsseldorf", "https://de.wikipedia.org/wiki/Pizza", "Alles", R.drawable.food3),
+            new Locality("Vegano", "Vegan und gesund.","XYZ, 40545 Düsseldorf", "https://de.wikipedia.org/wiki/Pizza", "Vegan", R.drawable.food4)};
+
         public static Contact[] contacts = {new Contact(LocalDateTime.of(2024, 7, 12, 12, 34),
             "Hi, was genau sollten wir zur digitalen Innovation machen?",
             R.drawable.profile1),

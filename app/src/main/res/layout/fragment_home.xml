@@ -19,6 +19,7 @@
         android:layout_gravity="center_horizontal" />
 
     <TextView
+        android:id="@+id/welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/welcome"
@@ -27,6 +28,32 @@
         android:textSize="23sp"
         android:textColor="@color/NavyBlue"
         android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:id="@+id/filterTrendsBar"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10sp">
+
+        <Button
+            android:id="@+id/trendsFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/clashgrotesk_semibold"
+            android:text="@string/trendsFilter"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/friendsFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:fontFamily="@font/clashgrotesk_semibold"
+            android:text="@string/friendsFilter"
+            android:textColor="@color/white"/>
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
@@ -48,6 +75,7 @@
     </androidx.recyclerview.widget.RecyclerView>
 
     <TextView
+        android:id="@+id/clickHint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/clickHint"

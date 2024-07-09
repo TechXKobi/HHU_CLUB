@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -24,7 +25,7 @@ import de.hhu.hhu_go.domain.Article;
 import de.hhu.hhu_go.domain.Events;
 import de.hhu.hhu_go.domain.Locality;
 
-public class HomeFragment extends Fragment{
+public class HomeFragment extends Fragment implements View.OnClickListener{
 
 
     @Override
@@ -37,19 +38,19 @@ public class HomeFragment extends Fragment{
                 .inflate(R.layout.fragment_home,
                         container, false);
 
-        TextView welcomeText = (TextView) layout.getChildAt(1);
+        TextView welcomeText = (TextView) layout.findViewById(R.id.welcome);
         AlphaAnimation fadeIn = new AlphaAnimation(0.0f , 1.0f ) ;
         welcomeText.startAnimation(fadeIn);
         fadeIn.setDuration(1500);
         fadeIn.setFillAfter(true);
 
 
-        TextView clickHint = (TextView) layout.getChildAt(4);
+        TextView clickHint = (TextView) layout.findViewById(R.id.clickHint);
         clickHint.startAnimation(fadeIn);
         fadeIn.setDuration(1000);
         fadeIn.setFillAfter(true);
 
-        RecyclerView articleRecycler = (RecyclerView) layout.getChildAt(3);
+        RecyclerView articleRecycler = (RecyclerView) layout.findViewById(R.id.home_article_recycler);
 
         Article[] articles = DummyData.articles;
 
@@ -114,8 +115,33 @@ public class HomeFragment extends Fragment{
             }
         });
 
+        LinearLayout filter = (LinearLayout) layout.findViewById(R.id.filterTrendsBar);
+        Button trendsFilterButton = (Button) filter.findViewById(R.id.trendsFilter);
+        trendsFilterButton.setOnClickListener(this);
+
+        Button friendsFilterButton = (Button) filter.findViewById(R.id.friendsFilter);
+        friendsFilterButton.setOnClickListener(this);
+
         return layout;
     }
 
+    @Override
+    public void onClick(View view){
+        /*switch(view.getId()){
+            case R.id.friendsFilter:
+                onFriendsFilter();
+                break;
+            case R.id.trendsFilter:
+                onTrendsFilter();
+                break;
+        }*/
+    }
+
+    private void onTrendsFilter() {
+    }
+
+    private void onFriendsFilter() {
+        
+    }
 
 }
