@@ -7,6 +7,7 @@
     <string name="events">Veranstaltungen</string>
     <string name="trade">Tausch</string>
     <string name="locality">Erkunde</string>
+    <string name="food">Essen</string>
     <string name="message">Nachrichten</string>
     <string name="nav_open_drawer">open</string>
     <string name="nav_close_drawer">close</string>
@@ -39,4 +40,9 @@
     <string name="dus_rhein">Am Rhein 🌊</string>
     <string name="messengerTitle">Chatte 💬</string>
     <string name="startChat">+ Sende Chatanfrage</string>
+    <string name="foodTitle">Essen</string>
+    <string name="foodTrends">Heiße Empfehlungen 🔥</string>
+    <string name="addEmpfehlung">Empfehle 🍔</string>
+    <string name="trendsFilter">Trends</string>
+    <string name="friendsFilter">Freunde</string>
 </resources>
