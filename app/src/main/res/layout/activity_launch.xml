@@ -12,6 +12,7 @@
         android:id="@+id/launch_img"
         android:layout_width="400sp"
         android:layout_height="200sp"
+        android:layout_marginLeft="-12sp"
         android:layout_gravity="center"
         android:src="@drawable/hhulogofinale"/>
 
