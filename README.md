@@ -1,4 +1,4 @@
-*HHUCLUB* - die App für HHU-Studierende - bald (vielleicht) im Google Play Store 📱 erhältlich! 🔥
+*HHUCLUB* - die App für HHU-Studierende - Mockup
 
 by meow Studios 😸
 
